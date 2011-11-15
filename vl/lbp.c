@@ -226,16 +226,16 @@ vl_lbp_process (VlLbp * self,
         bin = self->mapping[bitString] ;
       }
 
-      if ((cx1 >= 0) & (cy1 >=0)) {
+      if ((cx1 >= 0) && (cy1 >=0)) {
         to(cx1,cy1,bin) += wx1 * wy1;
       }
-      if ((cx2 < (signed)cwidth)  & (cy1 >=0)) {
+      if ((cx2 < (signed)cwidth)  && (cy1 >=0)) {
         to(cx2,cy1,bin) += wx2 * wy1 ;
       }
-      if ((cx1 >= 0) & (cy2 < (signed)cheight)) {
+      if ((cx1 >= 0) && (cy2 < (signed)cheight)) {
         to(cx1,cy2,bin) += wx1 * wy2 ;
       }
-      if ((cx2 < (signed)cwidth) & (cy2 < (signed)cheight)) {
+      if ((cx2 < (signed)cwidth) && (cy2 < (signed)cheight)) {
         to(cx2,cy2,bin) += wx2 * wy2 ;
       }
     } /* x */
